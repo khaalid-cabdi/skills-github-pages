@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="so"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaasin App v4</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Yaasin App">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; visibility: hidden; } }
+        .splash-screen { animation: fadeOut 1s ease-in-out 2s forwards; }
+        .hide { display: none; }
+        .active-tab { border-bottom: 4px solid #facc15; color: #facc15; font-weight: bold; }
+        body { background: #f8fafc; font-family: 'Inter', sans-serif; overflow: hidden; }
+        .nav-scroll::-webkit-scrollbar { display: none; }
+        th, td { border-bottom: 1px solid #e2e8f0; padding: 12px; white-space: nowrap; }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-2{margin-right:0.5rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.hidden{display:none}.h-32{height:8rem}.h-screen{height:100vh}.w-32{width:8rem}.w-full{width:100%}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}@keyframes bounce{0%, 100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(0.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,0.2,1)}}.animate-bounce{animation:bounce 1s infinite}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.rounded-2xl{border-radius:1rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-none{border-style:none}.border-green-600{--tw-border-opacity:1;border-color:rgb(22 163 74 / var(--tw-border-opacity, 1))}.border-indigo-600{--tw-border-opacity:1;border-color:rgb(79 70 229 / var(--tw-border-opacity, 1))}.border-indigo-800{--tw-border-opacity:1;border-color:rgb(55 48 163 / var(--tw-border-opacity, 1))}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-indigo-900{--tw-bg-opacity:1;background-color:rgb(49 46 129 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.from-blue-900{--tw-gradient-from:#1e3a8a var(--tw-gradient-from-position);--tw-gradient-to:rgb(30 58 138 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-indigo-600{--tw-gradient-from:#4f46e5 var(--tw-gradient-from-position);--tw-gradient-to:rgb(79 70 229 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-purple-600{--tw-gradient-to:rgb(147 51 234 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #9333ea var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-indigo-900{--tw-gradient-to:#312e81 var(--tw-gradient-to-position)}.to-pink-500{--tw-gradient-to:#ec4899 var(--tw-gradient-to-position)}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pl-2{padding-left:0.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-7xl{font-size:4.5rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.italic{font-style:italic}.tracking-tighter{letter-spacing:-0.05em}.tracking-widest{letter-spacing:0.1em}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.text-yellow-800{--tw-text-opacity:1;color:rgb(133 77 14 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.opacity-70{opacity:0.7}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-indigo-500{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}</style></head>
+<body onload="initApp()">
+
+    <div id="splash" class="splash-screen fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 to-indigo-900 text-white">
+        <i class="fas fa-store-alt text-7xl mb-4 animate-bounce text-yellow-400"></i>
+        <h1 class="text-4xl font-black tracking-widest uppercase">YAASIN APP</h1>
+        <p class="mt-2 opacity-70 italic">Maareynta Meheraddaada...</p>
+    </div>
+
+    <div id="login-page" class="fixed inset-0 z-40 flex items-center justify-center bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 p-6" style="display: flex;">
+        <div class="bg-white p-8 rounded-[2rem] shadow-2xl w-full max-w-sm border border-white/20">
+            <div class="text-center mb-6">
+                <h2 class="text-3xl font-bold text-indigo-900">Soo Gal</h2>
+                <p class="text-gray-500 text-sm italic">Gali: admin / 1234</p>
+            </div>
+            <div class="space-y-4">
+                <input type="text" id="user_field" placeholder="Username" class="w-full p-4 rounded-xl bg-gray-100 border-none focus:ring-2 ring-indigo-500">
+                <input type="password" id="pass_field" placeholder="Password" class="w-full p-4 rounded-xl bg-gray-100 border-none focus:ring-2 ring-indigo-500">
+                <button onclick="checkLogin()" class="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold shadow-lg hover:bg-indigo-700 transition">LOGIN</button>
+            </div>
+            <p id="error-msg" class="text-red-600 text-center mt-4 hidden font-bold">Xogtu waa khalad!</p>
+        </div>
+    </div>
+
+    <div id="dashboard" class="flex flex-col h-screen hide">
+        <header class="bg-indigo-900 text-white shadow-xl sticky top-0 z-30">
+            <div class="p-4 flex justify-between items-center border-b border-indigo-800">
+                <h1 class="font-bold text-xl uppercase tracking-tighter">Yaasin Panel</h1>
+                <div class="flex gap-4">
+                    <button onclick="logout()"><i class="fas fa-sign-out-alt"></i></button>
+                    <i class="fas fa-bell text-yellow-400"></i>
+                </div>
+            </div>
+            <nav class="nav-scroll flex overflow-x-auto space-x-6 px-4 py-3 text-xs font-bold uppercase tracking-widest">
+                <button onclick="openTab('orders')" class="nav-link">Orders</button>
+                <button onclick="openTab('stock')" class="nav-link">Stock</button>
+                <button onclick="openTab('info')" class="nav-link">Info</button>
+                <button onclick="openTab('employees')" class="nav-link">Staff</button>
+                <button onclick="openTab('menu')" class="nav-link">Menu</button>
+                <button onclick="openTab('shift')" class="nav-link">Shifts</button>
+                <button onclick="openTab('sales')" class="nav-link">Sales</button>
+                <button onclick="openTab('report')" class="nav-link">Report</button>
+                <button onclick="openTab('profile')" class="nav-link active-tab">Profile</button>
+            </nav>
+        </header>
+
+        <main class="flex-1 overflow-y-auto p-4 bg-gray-100">
+            <div id="orders" class="tab-content bg-white rounded-2xl shadow-sm p-4 hide">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold border-l-4 border-indigo-600 pl-2">Orders</h2>
+                    <button onclick="addRow('order-body')" class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-lg text-xs font-bold">+ Kudar</button>
+                </div>
+                <div class="overflow-x-auto"><table class="w-full text-xs text-left"><thead class="bg-gray-50"><tr><th>ID</th><th>Client</th><th>Item</th><th>Total</th><th>Action</th></tr></thead><tbody id="order-body"><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td>#001</td><td>Customer A</td><td>$25.00</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr></tbody></table></div>
+            </div>
+
+            <div id="stock" class="tab-content bg-white rounded-2xl shadow-sm p-4 hide">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold border-l-4 border-green-600 pl-2">Stock</h2>
+                    <button onclick="addRow('stock-body')" class="bg-green-100 text-green-700 px-3 py-1 rounded-lg text-xs font-bold">+ Kudar</button>
+                </div>
+                <div class="overflow-x-auto"><table class="w-full text-xs text-left"><thead class="bg-gray-50"><tr><th>Product</th><th>Qty</th><th>Cost</th><th>Action</th></tr></thead><tbody id="stock-body"><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr><tr><td>Product A</td><td>100</td><td>$5.00</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr></tbody></table></div>
+            </div>
+
+            <div id="profile" class="tab-content text-center py-10">
+                <div class="w-32 h-32 bg-indigo-100 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg"><i class="fas fa-user-tie text-5xl text-indigo-600"></i></div>
+                <h2 class="text-2xl font-bold">Admin Yaasin</h2>
+                <p class="text-gray-500 mb-8">Meheradda Maamule</p>
+                <button onclick="downloadApp()" class="w-full bg-emerald-500 text-white py-4 rounded-2xl font-bold shadow-xl flex items-center justify-center gap-3">
+                    <i class="fas fa-cloud-download-alt"></i> SAVE CHANGES (DOWNLOAD)
+                </button>
+                <div class="mt-6 p-4 bg-yellow-50 rounded-xl text-xs text-yellow-800 italic">
+                    <i class="fas fa-info-circle mr-2"></i> Si aad Home Screen-ka u geliso: <br>
+                    <strong>Android:</strong> Riix saddexda dhibic ( ⋮ ) -&gt; Add to Home Screen. <br>
+                    <strong>iPhone:</strong> Riix badhanka Share (⎋) -&gt; Add to Home Screen.
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let isDataLoaded = false;
+
+        function initApp() {
+            document.getElementById('dashboard').classList.add('hide');
+            document.getElementById('login-page').style.display = 'flex';
+        }
+
+        function checkLogin() {
+            const u = document.getElementById('user_field').value.trim();
+            const p = document.getElementById('pass_field').value.trim();
+            if (u === "admin" && p === "1234") {
+                document.getElementById('login-page').style.display = 'none';
+                document.getElementById('dashboard').classList.remove('hide');
+                if (!isDataLoaded) { loadData(); isDataLoaded = true; }
+            } else {
+                document.getElementById('error-msg').classList.remove('hide');
+            }
+        }
+
+        function logout() { location.reload(); }
+
+        function openTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.add('hide'));
+            document.getElementById(tabName).classList.remove('hide');
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active-tab'));
+            event.currentTarget.classList.add('active-tab');
+        }
+
+        function addRow(targetId) {
+            const tbody = document.getElementById(targetId);
+            const row = tbody.insertRow(0);
+            row.innerHTML = `<td contenteditable="true">New</td><td contenteditable="true">Edit Me</td><td contenteditable="true">$0</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td>`;
+        }
+
+        function downloadApp() {
+            // Password lock before saving
+            document.getElementById('dashboard').classList.add('hide');
+            document.getElementById('login-page').style.display = 'flex';
+            const htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'Yaasin_App.html';
+            a.click();
+            document.getElementById('login-page').style.display = 'none';
+            document.getElementById('dashboard').classList.remove('hide');
+        }
+
+        function loadData() {
+            const ob = document.getElementById('order-body');
+            ob.innerHTML = `<tr><td>#001</td><td>Customer A</td><td>$25.00</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr>`;
+            const sb = document.getElementById('stock-body');
+            sb.innerHTML = `<tr><td>Product A</td><td>100</td><td>$5.00</td><td><button onclick="this.parentElement.parentElement.remove()" class="text-red-500"><i class="fas fa-trash"></i></button></td></tr>`;
+        }
+    </script>
+
+
+</body></html>
